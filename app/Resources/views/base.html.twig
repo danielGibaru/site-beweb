@@ -2,14 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}beWeb{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="img/beweb.png" href="{{ asset('favicon.ico') }}" />
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/master.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
         <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!-- css admin -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css.map">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/admin.css">
+
+
     </head>
     <body>
         {% block body %}{% endblock %}
