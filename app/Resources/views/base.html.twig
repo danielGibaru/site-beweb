@@ -4,21 +4,18 @@
         <meta charset="UTF-8" />
         <title>{% block title %}beWeb{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/master.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css.map">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-
-        <!-- css admin -->
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/bootstrap.min.css.map">
-        <link rel="stylesheet" href="/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/admin.css">
-
-
+        {% block head %}{% endblock %}
     </head>
     <body>
+        <div id="mainmenu" class="btn-group btn-group-lg btn-group-justified" role="group" aria-label="...">
+            <a type="button" class="btn"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a type="button" class="btn"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+            <a type="button" class="btn"><i class="fa fa-certificate" aria-hidden="true"></i></a>
+            <a type="button" class="btn"><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+            <a type="button" class="btn"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
+            <a type="button" class="btn"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+            {% block nav %}{% endblock %}
+        </div>
         {% block body %}{% endblock %}
 
         {% block javascripts %}{% endblock %}

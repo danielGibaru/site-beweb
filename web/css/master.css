@@ -3,6 +3,10 @@ img{
     margin: 12% 10%;
 
 }
+h3{
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+}
 #mainmenu{
     background-color: #2a2a2a;
     position: fixed;
@@ -18,19 +22,26 @@ img{
 }
 
 #quisommenous{
-    margin: 50px 0px;
-    border: 1px solid rgb(164, 164, 164);
+    border-top: 1px solid rgb(164, 164, 164);
+    border-right: 1px solid rgb(164, 164, 164);
     border-radius: 5px;
+    margin: 5px 50px 50px;
+    padding: 25px 0px 0px 0px;
+
 }
 #containeractu{
-    border: 1px solid rgb(164, 164, 164);
+    border-top: 1px solid rgb(164, 164, 164);
+    border-right: 1px solid rgb(164, 164, 164);
     border-radius: 5px;
-    margin: 20px 15px;
+    margin: 5px 50px 50px;
+    padding: 25px 0px 0px 0px;
 }
 #containerpart{
-    border: 1px solid rgb(164, 164, 164);
+    border-top: 1px solid rgb(164, 164, 164);
+    border-right: 1px solid rgb(164, 164, 164);
     border-radius: 5px;
-    margin: 20px 15px;
+    margin: 5px 50px 50px;
+    padding: 25px 0px 0px 0px;
 }
 #imgactu{
     border: 1px solid rgb(164, 164, 164);

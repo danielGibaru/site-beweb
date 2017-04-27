@@ -1,5 +1,16 @@
 {% extends "base.html.twig" %}
+{% block head %}
+<!-- css admin -->
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css.map">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/admin.css">
+{% endblock %}
+
 {% block body %}
+<div id="body">
+
     <div id="content">
         <div id="nav" class="btn-group-vertical ">
             <a type="button" class="btn"><i class="fa fa-home " aria-hidden="true"></i></a>
@@ -29,4 +40,5 @@
             <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
         </div>
     </div>
+</div>
 {% endblock %}

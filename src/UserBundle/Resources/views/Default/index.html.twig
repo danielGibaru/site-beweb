@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+{% block head %}
+<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css.map">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/user.css">
+{% endblock %}
+{% block body %}
+    <div id="void">
+        <div id="content">
+            <div id="navuser" class="btn-group">
+                <a type="button" class="btn"><i class="fa fa-home " aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>    
+            <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-terminal" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-laptop" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-area-chart" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
