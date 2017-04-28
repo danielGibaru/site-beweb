@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>beWeb - Espace d'administration</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css.map') }}">
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+
+        {% block stylesheets %}{% endblock %}
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div id="wrap">
+            <nav id="sidebar">
+                <div class="heading"></div>
+                <a href="#"><i class="fa fa-tachometer " aria-hidden="true"></i> Dashboard</a>
+                <a href="#"><i class="fa fa-home " aria-hidden="true"></i> Page d'accueil</a>
+                <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i> Pages</a>
+                <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Pages</a>
+                <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Paramètres</a>
+                {% block sidebar %}{% endblock %}
+            </nav>
+            <main>
+                <div class="heading">
+                    <img src="{{ asset('img/logo_small.png') }}" alt="beWeb">
+                </div>
+                <br><br>
+                <div class="container">
+                    {% block body %}{% endblock %}
+                </div>
+            </main>
+        </div>
+
+
+        <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,4 +1,0 @@
-services:
-#    beweb.example:
-#        class: BewebBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]

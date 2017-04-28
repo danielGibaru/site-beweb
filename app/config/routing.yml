@@ -8,11 +8,6 @@ admin:
     type:     annotation
     prefix:   /
 
-beweb:
-    resource: "@BewebBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

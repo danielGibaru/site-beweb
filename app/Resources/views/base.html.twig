@@ -3,21 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}beWeb{% endblock %}</title>
+
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css.map') }}">
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/master.css') }}">
+
         {% block stylesheets %}{% endblock %}
         {% block head %}{% endblock %}
     </head>
     <body>
-        <div id="mainmenu" class="btn-group btn-group-lg btn-group-justified" role="group" aria-label="...">
+        <nav id="mainmenu" class="btn-group btn-group-lg btn-group-justified" role="group" aria-label="...">
             <a type="button" class="btn"><i class="fa fa-home" aria-hidden="true"></i></a>
             <a type="button" class="btn"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
             <a type="button" class="btn"><i class="fa fa-certificate" aria-hidden="true"></i></a>
             <a type="button" class="btn"><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
             <a type="button" class="btn"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
             <a type="button" class="btn"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+            <a type="button" class="btn"><i class="fa fa-key" aria-hidden="true"></i></a>
             {% block nav %}{% endblock %}
-        </div>
+        </nav>
         {% block body %}{% endblock %}
 
+        <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

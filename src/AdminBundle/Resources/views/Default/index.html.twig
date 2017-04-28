@@ -1,44 +1,48 @@
-{% extends "base.html.twig" %}
-{% block head %}
-<!-- css admin -->
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/bootstrap.min.css.map">
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-<link rel="stylesheet" href="/css/admin.css">
-{% endblock %}
-
+{% extends "adminbase.html.twig" %}
+{% block sidebar %}{% endblock %}
 {% block body %}
-<div id="body">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default panel_widget">
+                <div class="widget-heading">
+                    Messages
+                </div>
+                <div class="widget-body">
+                    <ul class="widget-list">
+                        <li>
+                            <strong>Inscriptions</strong><br>
+                            <em>corin.alex@mail.com</em>
+                            <span>28/04/2017 16h22</span>
+                        </li>
+                        <li>
+                            <strong>Information sur la formation</strong><br>
+                            <em>corin.alex@mail.com</em>
+                            <span>28/04/2017 16h22</span>
+                        </li>
+                        <li>
+                            <strong>Proposition partenariat</strong><br>
+                            <em>corin.alex@mail.com</em>
+                            <span>28/04/2017 16h22</span>
+                        </li>
+                        <li>
+                            <strong>Un message de test</strong><br>
+                            <em>corin.alex@mail.com</em>
+                            <span>28/04/2017 16h22</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <div id="content">
-        <div id="nav" class="btn-group-vertical ">
-            <a type="button" class="btn"><i class="fa fa-home " aria-hidden="true"></i></a>
-            <a type="button" class="btn"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
-            <a type="button" class="btn"><i class="fa fa-certificate" aria-hidden="true"></i></a>
-            <a type="button" class="btn"><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
-            <a type="button" class="btn"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+        <div class="col-sm-4">
+            <div class="panel panel-default panel_widget">
+                <div class="widget-heading">
+                    Derniers signalements
+                </div>
+                <div class="panel-body">
+                    Aucune alerte
+                </div>
+            </div>
         </div>
-    </div>
-    <div id ="contenaire">
-        <div id="widget">
-            <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
-        </div>
-        <div id="widget">
-            <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
-        </div>
-        <div id="widget">
-            <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
-        </div>
-        <div id="widget">
-            <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
-        </div>
-        <div id="widget">
-            <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
-        </div>
-        <div id="widget">
-            <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
+
 {% endblock %}
