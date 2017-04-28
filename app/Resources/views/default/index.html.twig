@@ -108,17 +108,20 @@
         </div>
     </div>
     <h3>Contactez nous</h3>
-    <div id="containerpart" class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <input type="email" value="Votre Email"class="form-control">
-                    </br>
-                    <textarea class="form-control" value"Votre demande" rows="5" ></textarea>
-                    </br>
-                    <button type="submit" class="btn btn-default">Envoyer</button>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <form id="contactform" class="form-group">
+            <input type="email" id="contactemail" name="contactemail" placeholder="Votre Email" class="form-control">
+            </br>
+            <input type="text" id="contactsubject" name="contactsubject" placeholder="Sujet" class="form-control">
+            </br>
+            <textarea class="form-control" id="contactcontent" name="contactcontent" rows="5" placeholder="Votre demande" ></textarea>
+            </br>
+            <button type="submit" class="btn btn-default">Envoyer</button>
+        </form>
     </div>
+    <br><br>
 {% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/site.js') }}"></script>
+{%  endblock %}
