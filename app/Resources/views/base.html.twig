@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/master.css') }}">
 
+        <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+
+
         {% block stylesheets %}{% endblock %}
         {% block head %}{% endblock %}
     </head>
@@ -20,9 +23,44 @@
             <a type="button" class="btn"><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
             <a type="button" class="btn"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
             <a type="button" class="btn"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-            <a type="button" class="btn"><i class="fa fa-key" aria-hidden="true"></i></a>
+            <a type="button" class="btn" id="action"><i class="fa fa-key" aria-hidden="true"></i></a>
             {% block nav %}{% endblock %}
         </nav>
+        {% block header %}
+            <script>
+                $(document).ready(function(){
+                        $("#action").click(function(){
+                        $("#panellogin").slideToggle("slow");
+                    });
+                });
+            </script>
+
+            <div id="panellogin">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Mots de passe</label>
+                        <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox">se souvenir</label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Valider</button>
+                </form>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    $("button").click(function(){
+                        var email = $("#email").val();
+                        var pwd = $("#pwd").val();
+                    });
+                });
+    </script>
+
+        {% endblock %}
         {% block body %}{% endblock %}
 
         <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
