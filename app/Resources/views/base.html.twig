@@ -26,7 +26,10 @@
             <a type="button" class="btn" id="action"><i class="fa fa-key" aria-hidden="true"></i></a>
             {% block nav %}{% endblock %}
         </nav>
-        {% block header %}
+        <div id="#loginResponse">
+
+        </div>
+        {% block connection %}
             <script>
                 $(document).ready(function(){
                         $("#action").click(function(){
@@ -37,6 +40,9 @@
 
             <div id="panellogin">
                 <form>
+                    <em>Connexion utilisateur. En cas de succès, renvoie l'id sessions.<br>
+                    Utilisateur de test : text@test.com / 123456</em><br><br>
+                    <div id="loginResponse"></div>
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" id="email">
@@ -48,18 +54,61 @@
                     <div class="checkbox">
                         <label><input type="checkbox">se souvenir</label>
                     </div>
-                    <button type="submit" class="btn btn-default">Valider</button>
+                    <button type="button" class="btn btn-default">Valider</button>
                 </form>
             </div>
             <script>
-                $(document).ready(function(){
-                    $("button").click(function(){
-                        var email = $("#email").val();
-                        var pwd = $("#pwd").val();
+                // $(document).ready(function(){
+                //     $("button").click(function(){
+                //         var email = $("#email").val();
+                //         var pwd = $("#pwd").val();
+                //     });
+                // });
+            </script>
+            <script>
+                $("#panellogin button").click(function() {
+                    var api_url = "http://api.beweb.local";
+                    $.ajax({
+                        type:"POST",
+                        url: api_url + "/?" + "4DECDA07CEE9" + "/User/Login/",
+                        dataType:"json",
+                        data : {
+                            email: $("#email").val(),
+                            pwd: $("#pwd").val()
+                        },
+                        success: function(response) {
+                            $("#loginResponse").html('<div class="alert alert-success" role="alert">Succès ! ID Session : ' + response.message + '</div>');
+                        },
+                        error: function(xhr) {
+                            var response =  JSON.parse(xhr.responseText);
+                            $("#loginResponse").html('<div class="alert alert-danger" role="alert">' + response.error + '</div>');
+                        }
                     });
                 });
-    </script>
-
+            </script>
+            <script>
+                // var url ="http://api.beweb.local";
+                // $(document).ready(function(){
+                //     $("#button").click(function(){
+                //         $.ajax({
+                //             type: "POST",
+                //             url: url + "/?" + "/User/" + sid ,
+                //             dataType: 'json',
+                //             data: {
+                //                 var email = $("#email").val(),
+                //                 var pwd = $("#pwd").val(),
+                //                 var sid = $("#sessionId").val()
+                //             },
+                //             success: function(){
+                //                 alert("GG");
+                //             },
+                //             error: function() {
+                //                 alert("fromage");
+                //             }
+                //         });
+                //     });
+                // });
+            </script>
         {% endblock %}
         {% block body %}{% endblock %}
 
